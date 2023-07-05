@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const Person = (props) => {
+  return (
+    <>
+    <h1>Name: {props.name}</h1>
+    <h2>Last name: {props.lastName}</h2>
+    <h2>Age: {props.age}</h2>
+    </>
+  )
+}
+
+const App = () => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* The curly braces are not necessity for this part unless putting logic in such as 2 + 2 */}
+      <Person name={'John'} lastName={'Doe'} age={'42'}/> 
+      <Person name={'Mark'} lastName={'March'} age={'53'}/> 
     </div>
   );
 }
